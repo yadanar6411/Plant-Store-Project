@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+          font-family: Arial, sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0px;
+            background-color: rgb(230, 230, 200);
+        }
+         /* ===== Nav panel ===== */
+        header {
+            background-color:  rgb(46, 54, 41);
+            position: sticky;
+            z-index: 1;
+            top: 0;
+        }
+ 
+        .nav-bar {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+ 
+        #search-bar {
+            padding: 5px;
+            border-radius: 15px;
+            border: 3px solid rgb(230, 230, 200);
+            font-size: 15px;
+            background-color: rgb(71, 88, 63);
+        }
+ 
+        .nav-bar li {
+            font-size: 20px;
+            display: inline-block;
+            padding: 18px 15px;
+        }
+ 
+        .nav-bar a {
+            text-decoration: none;
+            color: rgb(230, 230, 200);
+            font-weight: bold;
+        }
+ 
+        .nav-bar a:hover {
+            text-decoration: underline;
+            color: #0059ff;
+        }
+        /* ===== Nav Panel ===== */
+        .container-fluid{
+            width: 100%;
+            margin: 0;
+        }
+        .outerbox{
+            margin: 0;
+            width: 100%;
+            height: 540px;
+            background-image: url(green\ bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .transbox{
+            margin: auto;
+            width: 80%;
+            height: 505px;
+            padding: 2px 2px;
+            background-color: rgba(63, 69, 63, 0.308);
+            border-left: 1.5px solid rgb(6, 23, 6);
+            border-bottom: 1.5px solid rgb(6, 23, 6);
+            border-right: 1.5px solid rgb(6, 23, 6);
+        }
+        h1{
+            color: white;
+            padding-top: 30px;
+            font-size: 273%;
+            font-weight: bold;
+
+        }
+        h5{
+            color: white;
+            font-size: 98%;
+            font-family: Arial, sans-serif;
+        }
+        .transbox img{
+            margin-top: 30px;
+            padding-left: 60px;
+            float: left;
+            padding-right: 90px;
+        }
+        .heading-p{
+            font-size: 185%;
+            color: white;
+            display: inline-block;
+            border-bottom: 1.5px solid white;
+            padding-bottom: 5px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        #p-ques{
+            color: white;
+            font-size: 91%;
+            border-bottom: 0px solid white;
+            font-family: Arial, sans-serif;
+        }
+        .container-bg{
+            background-color: rgb(230, 230, 200);
+            height: 913px;
+        }
+        .container-bg2{
+            background-color: rgb(230, 230, 200);
+            height: 1489px;
+        }
+        .container-bgA{
+            background-color: rgb(230, 230, 200);
+            height: 4500px;
+        }
+        .con{
+            background-color: rgb(20, 34, 20);
+            height: 45px;
+        }
+        .con1{
+            background-color: rgb(166, 166, 158);
+            height: 35px;
+        }
+        .con2{
+            background-color: rgb(230, 230, 200);
+            height: 17px;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .container {
+            width: 100%;
+        }
+        .row {
+            width: 100%;
+        }
+        .col{
+            width: 25%;
+            float: left;
+            box-sizing: border-box;
+            margin-top: 25px;
+        }
+        .card{
+            margin: auto;
+            background-color: rgba(221, 249, 222, 0.336);
+            height: 370px;
+            width: 73%;
+            border-radius: 12%;
+            box-shadow: rgba(10, 35, 17, 0.25) 0px 50px 100px -20px, rgba(88, 87, 87, 0.3)
+            0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border: 0.8px solid rgba(41, 41, 41, 0.316);
+        }
+        .card img{
+            border-radius: 17%;
+            padding: 27px;
+        }
+        h3{
+            color: rgb(46, 54, 41);
+            text-align: center;
+            margin-top: 0.3px;
+            font-size: 100%;
+        }
+        .price-p{
+            text-align: center;
+            color: rgb(46, 54, 41);
+            font-weight: 200;
+            font-size: 98%;
+            margin-top: 1px;
+        }
+        h2{
+            color: rgb(46, 54, 41);
+            font-family: Arial, sans-serif;
+            font-weight: 200;
+            text-align: center;
+            font-size: 243%;
+        }
+        .container-2{
+            width: 100%;
+            height: 382px;
+        }
+        .h4-col{
+            font-size: 252%;
+            color: rgb(46, 54, 41);
+            font-weight: 400;
+            padding-left: 250px;
+            margin-bottom: 0;
+        }
+        .p-col1{
+            color: rgb(46, 54, 41);
+            padding-left: 250px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        .column1{
+            width: 46%;
+            height: 382px;
+            float: right;
+        }
+        .column3{
+            height: 382px;
+            width: 39%;
+            float: right;
+        }
+        .card2{
+            width: 54%;
+            height: 120px;
+            margin-top: 48px;
+            background-color: rgb(88, 100, 80);
+            float: right;
+        }
+        .card2 img, .card3 img{
+            width: 35%;
+        }
+        .card3{
+            width: 54%;
+            height: 120px;
+            float: right;
+            background-color: rgb(88, 100, 80);
+            margin-top: 11px;
+            margin-left: 600px;
+        }
+        .card2 img, .card3 img{
+            padding: 4px;
+        }
+        .column2{
+            width: 15%;
+            height: 378px;
+            float: left;
+            background-color: rgb(88, 100, 80);
+        }
+        .column2 img{
+            padding-left: 83px;
+        }
+        .containerA{
+            width: 100%;
+            margin-top: 20px;
+            margin: auto;
+        }
+        .containerS{
+            width: 100%;
+            margin: auto;
+        }
+        .colA{
+            margin: auto;
+            width: 33.33%;
+            float: left;
+            box-sizing: border-box;
+            margin-top: 17px;
+        }
+        .colS{
+            margin: auto;
+            width: 25%;
+            float: left;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+        .cardA{
+            margin: auto;
+            width: 55%;
+            height: 360px;
+            background-color: rgb(88, 100, 80);
+            color: white;
+            position: relative;
+        }
+        .cardS{
+            margin: auto;
+            width: 76%;
+            height: 374px;
+            background-color: rgb(88, 100, 80);
+            color: white;
+            position: relative;
+        }
+        .cardA img, .cardS img{
+            width: 100%;
+        }
+        .spanA{
+            position: absolute;
+            top: 20px;right: 23px;
+            font-weight: 400;
+            color: rgb(29, 41, 22);
+            font-size: 115%;
+            padding: 10px;
+        }
+        .price-pA{
+            text-align: center;
+            color: rgb(230, 230, 200);
+            font-weight: 300;
+            font-size: 110%;
+            margin-top: 26px;
+        }
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color:  rgb(46, 54, 41);
+            padding: 30px;
+            text-align: center;
+            color: rgb(230, 230, 200);
+            font-size: 20px;
+            font-weight: bold;
+        }
+ 
+        .footer li {
+            display: inline-block;
+            margin: 10px;
+            padding: 18px 15px;
+        }
+ 
+        .footer a {
+            text-decoration: none;
+            color: rgb(230, 230, 200);
+        }
+ 
+        .footer a:hover {
+            text-decoration: underline;
+            color: #0051ff;
+        }
+ 
+        .fa {
+            font-size: 20px;
+            margin: 10px;
+            color: #606C38;
+        }
+ 
+        #backtotop {
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+        }
+        .footer-copyright{
+            font-size: 80%;
+            border-bottom: 0px solid white;
+        }
+        /* ===== FOOTER ===== */
+    </style>
+</head>
+<body>
+   <!-- Nav Panel -->  
+<header>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Page2.html">Shop</a></li>
+            <li><a href="care tips.html">Care Guides</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li style="font-family:cursive;color: rgb(230, 230, 200); font-weight: bold;">"HYC Plants & Seeds Store"</li>
+            <li><input type="text" id="search-bar" placeholder="Search..."></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Nav Panel -->
+    <div class="container-fluid">
+      <div class="outerbox">
+        <div class="transbox">
+            <img src="plantimg.jpg" alt="" width="285px">
+          <h1>Shop our Collection</h1>
+          <p class="heading-p">Find your perfect plants!</p>
+          <h5>Grow Green. Live fresh. Explore our carefully selected plants
+            <br>and seeds made to inspire your space.
+          </h5>
+          <p id="p-ques">Are you looking forward to purchasing our incredible plants? <br>
+           Are you looking for plants that are currently offered in our store right now? <br>
+           <b>So, why not scroll down and discover what's waiting for you?</b><br></p>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="con"></div>
+    <div class="con1"></div>
+    <div class="container-bg">
+        <div class="container">
+            <h2>Plants in Stock</h2>
+        <div class="row clearfix">
+            <div class="col">
+              <div class="card">
+            <img src="snake plant.jpg" width="220px" alt="">
+            <h3>Snake Plant</h3>
+            <p class="price-p">$10</p>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="neon.jpg" width="220px" alt="">
+            <h3>Neon Plant</h3>
+            <p class="price-p">$8</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="dragon plant.jpg" width="220px" alt="">
+            <h3>Dracaena</h3>
+            <p class="price-p">$20</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="jade plant.jpg" width="220px" alt="">
+            <h3>Jade Plant</h3>
+            <p class="price-p">$8</p>
+                </div>
+            </div>
+            <div class="col">
+              <div class="card">
+            <img src="aloe vera.jpg" width="220px" alt="">
+            <h3>Aloe Vera</h3>
+            <p class="price-p">$8</p>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="rubber.jpg" width="220px" alt="">
+            <h3>Rubber Plant</h3>
+            <p class="price-p">$12</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="peace lily.jpg" width="220px" alt="">
+            <h3>Peace Lily</h3>
+            <p class="price-p">$8</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="spider.jpg" width="220px" alt="">   
+            <h3>Spider Plant</h3>   
+            <p class="price-p">$10</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="con"></div>
+    <div class="con1"></div>
+    <div class="con2"></div>
+    <div class="container-bg2">
+        <div class="container-2">
+            <div class="row clearfix">
+            <div class="column3">
+            
+             <div class="card2">
+               <img src="majesty.jpg" width="110px" alt="">
+               <img src="bamboo.jpg" width="110px" alt="">
+              </div>
+             <div class="card3">
+               <img src="Monstera.jpg" width="110px" alt="">
+               <img src="dumb cane.jpg" width="110px" alt="">
+              </div> 
+            </div>
+            <div class="column1">
+                <h4 class="h4-col">Fresh Green Arrivals</h4>
+                <p class="p-col1">The plant everyone has been waiting for is finally arrived! <br>
+             Highly popular and stunningly beautiful...it's an <b>ALOCASIA</b>! <br><br><br><br>
+             We also have many other new arrivals that are well-loved.<br>
+             Keep scrolling below to explore our latest favourites, and <br>
+             find the perfect new addition to your home!
+            </p>
+            </div>
+            
+            <div class="column2">
+             <img src="alocasia-removebg-preview.png" width="269px" alt="">
+            </div>
+        </div>
+        </div> <br>
+         <div class="con"></div>
+    <div class="con1"></div>
+         <div class="container">
+            <h2>Latest Plants</h2>
+        <div class="row clearfix">
+            <div class="col">
+              <div class="card">
+            <img src="alocasia.jpg" width="220px" alt="">
+            <h3>Alocasia</h3>
+            <p class="price-p">$19</p>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="bamboo.jpg" width="220px" alt="">
+            <h3>Lucky Bamboo</h3>
+            <p class="price-p">$13</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="zz plant.jpg" width="220px" alt="">
+            <h3>ZZ Plant</h3>
+            <p class="price-p">$14</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="Boston fern.jpg" width="220px" alt="">
+            <h3>Boston Fern</h3>
+            <p class="price-p">$9</p>
+                </div>
+            </div>
+            <div class="col">
+              <div class="card">
+            <img src="dumb cane.jpg" width="220px" alt="">
+            <h3>Dumb Cane</h3>
+            <p class="price-p">$15</p>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="haworthia.jpg" width="220px" alt="">
+            <h3>Haworthia</h3>
+            <p class="price-p">$8</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="calathea.jpg" width="220px" alt="">
+            <h3>Calathea Plant</h3>
+            <p class="price-p">$23</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+            <img src="cast iron.jpg" width="220px" alt="">   
+            <h3>Cast Iron Plant</h3>   
+            <p class="price-p">$22</p>
+                </div>
+            </div>
+        </div>
+        </div> <br><br>
+    </div>
+
+    <div class="con"></div>
+    <div class="con1"></div>
+    <div class="conatiner-bgA">
+    <div class="containerA">
+        <h2>Best-Selling Plants</h2>
+        <div class="row clearfix">
+            <div class="colA">
+                <div class="cardA">
+                    <span class="spanA">$9</span>
+                  <img src="fittonia.jpg" width="250px" alt="">
+                  <p class="price-pA">Fittonia Plant</p>
+                </div>
+            </div>
+             <div class="colA">
+                <div class="cardA">
+                    <span class="spanA">$19</span>
+                   <img src="evergreen.jpg" width="" alt="">
+                   <p class="price-pA">Chinese Evergreen</p>
+                </div>
+            </div>
+             <div class="colA">
+                <div class="cardA">
+                    <span class="spanA">$24</span>
+                   <img src="ponytail.jpg" width="" alt="">
+                   <p class="price-pA">Ponytail Palm</p>
+                </div>
+            </div>
+             <div class="colA">
+                <div class="cardA">
+                    <span class="spanA">$17</span>
+                   <img src="yucca.jpg" width="" alt="">
+                   <p class="price-pA">Yucca Palm</p>
+                </div>
+            </div>
+             <div class="colA">
+                <div class="cardA">
+                    <span class="spanA">$30</span>
+                   <img src="fishtail.jpg" width="" alt="">
+                   <p class="price-pA">Fishtail Palm</p>
+                </div>
+            </div>
+             <div class="colA">
+                <div class="cardA">
+                    <span class="spanA">$10</span>
+                   <img src="peperomia.jpg" width="" alt="">
+                   <p class="price-pA">Peperomia Plant</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> <br><br>
+<div class="con"></div>
+    <div class="con1"></div>
+    <div class="con2"></div>
+        <div class="container-S">
+            <div class="row clearfix">
+            <div class="column3">
+            
+             <div class="card2">
+               <img src="pepper.jpg" width="110px" alt="">
+               <img src="corn.jpg" width="110px" alt="">
+              </div>
+             <div class="card3">
+               <img src="cucumber.jpg" width="110px" alt="">
+               <img src="beans.jpg" width="110px" alt="">
+              </div> 
+            </div>
+            <div class="column1">
+                <h4 class="h4-col">High-Quality Seeds</h4> <br>
+                <p class="p-col1">Grow your own fresh fruits with our high-quality<br>
+                 fruit seeds. Our fruits seeds are easy and rapid to grow<br>
+                 and rewarding to harvest! 
+                 <br><br><br><br>
+                 Perfect for home gardens.<br><br>
+                 Grow fresh. Grow your own.
+            </p>
+            </div>
+            
+            <div class="column2">
+             <img src="Seeds-removebg-preview.png" width="358px" alt="" style="padding-left: 21px; padding-top: 24px;">
+            </div>
+        </div>
+        </div> 
+       
+        <div class="containerS">
+        <h2>Garden Seeds Available Now</h2>
+        <div class="row clearfix">
+            <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$30</span>
+                  <img src="green.jpg" width="250px" alt="">
+                  <p class="price-pA">Green Cardamom (1kg)</p>
+                </div>
+            </div>
+             <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$2.5</span>
+                   <img src="beans.jpg" width="" alt="">
+                   <p class="price-pA">Green Gram (1kg)</p>
+                </div>
+            </div>
+             <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$12</span>
+                   <img src="pumpkin.jpg" width="" alt="">
+                   <p class="price-pA">Pumpkin Seeds (1kg)</p>
+                </div>
+            </div>
+             <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$6</span>
+                   <img src="pepper.jpg" width="" alt="">
+                   <p class="price-pA">Black Pepper (1kg)</p>
+                </div>
+            </div>
+             <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$3</span>
+                   <img src="peanut.jpg" width="" alt="">
+                   <p class="price-pA">Peanut Seeds (1kg)</p>
+                </div>
+            </div>
+             <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$2</span>
+                   <img src="corn.jpg" width="" alt="">
+                   <p class="price-pA">Corn Seeds (1kg)</p>
+                </div>
+            </div>
+            <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$8</span>
+                   <img src="Wpepper.jpg" width="" alt="">
+                   <p class="price-pA">White Pepper (1kg)</p>
+                </div>
+            </div>
+            <div class="colS">
+                <div class="cardS">
+                    <span class="spanA">$23</span>
+                   <img src="cucumber.jpg" width="" alt="">
+                   <p class="price-pA">Cucumber Seeds (1kg)</p>
+                </div>
+            </div>
+        </div>
+    </div> <br><br><br><br><br>
+   <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+ 
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/plants-shop-illustration-svg-download-png-4003154.png" width="50px" alt="">
+        <span>HYC (Plants & Seeds Store)</span>
+ 
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Page2.html">Shop</a></li>
+            <li><a href="care tips.html">Care Guides</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+        </ul>
+    </div>
+ 
+    <hr>
+ 
+    <p class="footer-copyright" style="color: white;">
+        &copy; 2026 Year-7 Sangria Web Development (Room-5). All rights reserved.
+    </p>
+</footer>
+ 
+<a href="#top">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25243.png" id="backtotop" width="50" alt="Back to top">
+</a>
+<!-- Footer -->
+</body>
+</html>

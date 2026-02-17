@@ -1,0 +1,262 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: rgb(230, 230, 200);
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* ===== Nav panel ===== */
+        header {
+            background-color: rgb(46, 54, 41);
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-bar {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+
+        #search-bar {
+            padding: 5px;
+            border-radius: 15px;
+            border: 3px solid rgb(230, 230, 200);
+            font-size: 15px;
+            background-color: rgb(71, 88, 63);
+        }
+
+        .nav-bar li {
+            font-size: 20px;
+            display: inline-block;
+            padding: 18px 15px;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: rgb(230, 230, 200);
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+            color: #0059ff;
+        }
+        /* ===== Nav Panel ===== */
+
+        /* ===== Hero ===== */
+        .hero {
+            width: 100%;
+            height: 75vh;
+            background-image: url(Bg.png);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: rgb(230, 230, 200);
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+
+        .hero h1 {
+            margin-top: 9%;
+            background-color: rgba(59, 73, 53, 0.685);
+            display: inline-block;
+            padding: 30px 50px;
+            font-size: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 25px;
+            margin-top: 15px;
+        }
+        /* ===== Hero ===== */
+
+        /* ===== Contact Us ===== */
+        .Contact {
+            padding: 40px;
+            color: rgb(46, 54, 41);
+            margin: 50px auto;
+            width:85%;
+        }
+
+       
+
+        .info {
+    float: left;
+    width: 30%;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    background-color: #a1a579;
+    border-radius: 10px;
+    height: 320px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.info img{
+    border-radius: 30px;
+}
+
+.info:hover {
+    background-color: #7d805d; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+
+        /* ===== Contact Us ===== */
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: rgb(46, 54, 41);
+            padding: 30px;
+            text-align: center;
+            color: rgb(230, 230, 200);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .footer li {
+            display: inline-block;
+            margin: 10px;
+            padding: 18px 15px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: rgb(230, 230, 200);
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #0051ff;
+        }
+
+        .fa {
+            font-size: 20px;
+            margin: 10px;
+            color: #606C38;
+        }
+
+        #backtotop {
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+        }
+        /* ===== FOOTER ===== */
+    </style>
+</head>
+
+<body id="top">
+
+<header>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Page2.html">Shop</a></li>
+            <li><a href="care tips.html">Care Guides</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li style="font-family:cursive;color: rgb(230, 230, 200); font-weight: bold;">"HYC Plants & Seeds Store"</li>
+            <li><input type="text" id="search-bar" placeholder="Search..."></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>"HYC Plants & Seeds Store"</h1>
+    <p>Discover beautiful indoor and outdoor plants at affordable prices.</p>
+    <a href="Page2.html" style="background-color: rgb(71, 88, 63); color: white; padding: 10px;">Shop Now</a>
+</div>
+
+<div class="Contact">
+    <div class="row clearfix">
+        <h1 style="color: rgb(46, 54, 41); text-align:center;">Contact Us</h1>
+
+        <div class="info">
+            <img src="https://images.squarespace-cdn.com/content/v1/648e0024d2da1763d7ee94e7/7583c5b8-ce83-4ddd-b1d0-ed001a2c07f2/Store+front.jpg" width="30%" alt="Location">
+            <h3>Location</h3>
+            <p>
+                HYC Plant Shop<br>
+                No.25, Sangria Street,<br>
+                Griasan Township,<br>
+                Yangon, Myanmar
+            </p>
+        </div>
+
+        <div class="info">
+            <img src="https://media.gq.com/photos/598c7a0dff5bc3695a1d3cb1/master/w_1600%2Cc_limit/FullSizeRender%255B5%255D.jpg" width="30%" alt="Phone">
+            <h3>Phone</h3>
+            <p>
+                +95 9 123 456 789<br>
+                +95 1 234 567<br>
+                9AM - 6PM Daily
+            </p>
+        </div>
+
+        <div class="info">
+            <img src="https://i0.wp.com/bucketlistcommunitycafe.com/wp-content/uploads/2025/01/Lauterbach5-scaled.jpg?fit=2560%2C1920&ssl=1" width="30%" alt="Social Media">
+            <h3>Follow Us</h3>
+            <p>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-envelope"></i></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/plants-shop-illustration-svg-download-png-4003154.png" width="50px" alt="">
+        <span>HYC (Plants & Seeds Store)</span>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Page2.html">Shop</a></li>
+            <li><a href="care tips.html">Care Guides</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <p class="footer-copyright" style="color: white;">
+        &copy; 2026 Year-7 Sangria Web Development (Room-5). All rights reserved.
+    </p>
+</footer>
+
+<a href="#top">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25243.png" id="backtotop" width="50" alt="Back to top">
+</a>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(230, 230, 200);
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ===== Nav Panel ===== */
+
+header {
+    background-color:  rgb(46, 54, 41);
+    position: sticky;
+    top: 0;
+}
+
+.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+#search-bar {
+    padding: 5px;
+    border-radius: 15px;
+    border: 3px solid rgb(230, 230, 200);
+    font-size: 15px;
+    background-color: rgb(71, 88, 63);
+}
+
+.nav-bar li {
+    font-size: 20px;
+    display: inline-block;
+    padding: 18px 15px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(230, 230, 200);
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+    color: #0059ff;
+}
+
+/* ===== Hero Section===== */
+
+.hero {
+    width: 100%;
+    height: 75vh;
+    background-image: url(Bg.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: rgb(230, 230, 200);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.hero h1 {
+    margin-top: 9%;
+    background-color: rgba(59, 73, 53, 0.685);
+    display: inline-block;
+    padding: 30px 50px;
+    font-size: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.hero p {
+    font-size: 25px;
+    margin-top: 15px;
+    
+}
+
+/* ===== Back to top ===== */
+
+#backtotop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+/* ===== Featured Plants ===== */
+        .section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .plant {
+            display: inline-block;
+            width: 250px;
+            height: 400px;
+            margin: 30px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            font-size: 20px;
+            background-color: #a1a579;
+            border-radius: 10px;
+            color: rgb(46, 54, 41);
+        }
+
+        .plant img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .plant:hover {
+    background-color: #7d805d; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+    
+        /* ===== Intro ===== */
+.Intro {
+    background-color:  rgb(46, 54, 41);
+    padding: 50px;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.Intro ul {
+    list-style:none;
+    font-size: 20px;
+    display: inline-block;  
+    margin: 10px 20px;       
+   color: rgb(230, 230, 200);
+}
+
+.Intro img {
+    margin-right: 8px;
+}
+
+  
+/* ===== Reviews ===== */      
+
+
+.reviews {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.reviews1, .reviews2, .reviews3, .reviews4 {
+    width: 100%;
+    margin: 40px 0;
+    background-color:#7997a5;
+    padding: 30px;
+    border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+
+.reviews1 img:first-child {
+    float: right;
+    margin-left: 30px;
+}
+
+
+.reviews2 img:first-child {
+    float: left;
+    margin-right: 30px;
+}
+
+
+.reviews3 img:first-child {
+    float: right;
+    margin-left: 30px;
+}
+
+.reviews4 img:first-child {
+    float: left;
+    margin-right: 30px;
+}
+
+.reviews1:hover {
+    background-color: #5e6d77; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+
+ .reviews2:hover {
+    background-color: #5e6d77; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+    
+   .reviews3:hover {
+    background-color: #5e6d77; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+    
+    .reviews4:hover {
+    background-color: #5e6d77; 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color:  rgb(46, 54, 41);
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    color: rgb(230, 230, 200);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.footer li {
+    display: inline-block;
+    margin: 10px;
+    padding: 18px 15px;
+}
+
+.footer a {
+    text-decoration: none;
+   color: rgb(230, 230, 200);
+
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #0051ff;
+}
+
+.fa {
+    font-size: 20px;
+    margin: 10px;
+    color: #606C38;
+}
+
+
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Navigation Panel -->
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Page2.html">Shop</a></li>
+                <li><a href="care tips.html">Care Guides</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li style="font-family:cursive;color: rgb(230, 230, 200); font-weight: bold;">"HYC Plants & Seeds Store"</li>
+                <li><input type="text" id="search-bar" placeholder="Search..."></li>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>   
+                <a href="#" class="fa fa-instagram"></a>
+            </ul>
+        </nav>
+    </header>
+    <!-- Navigation Panel -->
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>"HYC Plants & Seeds Store"</h1>
+        <p>Discover beautiful indoor and outdoor plants at affordable prices.</p>
+        <a href="Page2.html" style="background-color: rgb(71, 88, 63); color: white; padding: 10px;">Shop Now</a>
+    </div>
+    <!-- Hero Section -->
+
+    
+<!-- Featured Plants -->
+    <div class="section">
+        <h1 style="color:  rgb(46, 54, 41);">Featured Plants</h1>
+
+        <div class="plant">
+            <img src="https://lh3.googleusercontent.com/proxy/DCI9lHZqc6NAukuuyQsXoC86uNrUDoqXGDBwMrGVQoBsN5X24Q0v7ghZ9LjX1S74vKNta2LGxRhx47JJWsIKgg_6vf4DhW-LanjxpUafFapfbd9zBEZcOfrj36g95ZeFz81gYv6-8zK8QhrbFK3WOsIBjxx1jEklVF3dcrCphjkZX7ol" alt="Snake Plant">
+            <h3>Snake Plant</h3>
+            <p>$10</p>
+        </div>
+
+        <div class="plant">
+            <img src="https://plantslive.in/wp-content/uploads/2017/03/Aloevera-Plantslive.png" alt="Aloe Vera">
+            <h3>Aloe Vera</h3>
+            <p>$8</p>
+        </div>
+
+
+        <div class="plant">
+            <img src="https://www.marthastewart.com/thmb/9zr1BdiAx9IwIl2xt84aJ-B3MmI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/27-common-houseplants-spider-plant-getty-1123-2eaf21199a1342a4b028b71e5a9752a6.jpg" alt="Aloe Vera">
+            <h3>Spider Plant</h3>
+            <p>$10</p>
+        </div>
+
+        <div class="plant">
+            <img src="https://www.marthastewart.com/thmb/CwlkV8ptPbAISVOnBCHEwPaXx_w=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/27-common-houseplants-jade-plant-getty-1123-cceeeb8b2cdb4e4b8b02fbab3e0042ff.jpg" alt="Aloe Vera">
+            <h3>Jade Plant</h3>
+            <p>$8</p>
+        </div>
+
+        <div class="plant">
+            <img src="https://www.marthastewart.com/thmb/lzwdi9g2GUVqGkeZ7URrShjuO5I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/27-common-houseplants-peace-lily-getty-1123-1848757b0b434dd3859d86f8fd2aca21.jpg" alt="Aloe Vera">
+            <h3>Peace Lily</h3>
+            <p>$8</p>
+        </div>
+    </div>
+    <!-- Featured Plants -->
+
+    <!-- Intro -->
+
+      <div>
+      <div class="Intro">
+        <h1 style="color: rgb(230, 230, 200);">Why Choose HYC?</h1>
+        <ul><img src="https://cdn-icons-png.flaticon.com/512/892/892926.png" width="35px" alt=""> Fresh and Healthy Plants </ul>
+        <ul><img src="https://www.iconpacks.net/icons/4/free-fast-food-delivery-bike-icon-12992-thumb.png" width="40px" alt=""> Fast Delivery</ul>
+        <ul><img src="https://cdn-icons-png.flaticon.com/512/8070/8070505.png" width="40px" alt="">Affordable Prices</ul>
+    </div>
+     <!-- Intro -->
+
+
+      <!--Reviews-->
+     <div class="reviews">
+     <div class="row clearfix">
+
+
+        <div class="reviews1">
+            <img src="https://images.icon-icons.com/2643/PNG/512/avatar_female_woman_person_people_white_tone_icon_159360.png" width="100px" alt="Snake Plant">
+            <h3>"Very affordable prices and fast delivery. Highly recommended!"</h3>
+            <p>Cris,Shan</p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/726/small/yellow-five-stars-quality-rating-icons-5-stars-icon-five-star-sign-rating-symbol-transparent-background-illustration-png.png" width="100px" alt="Snake Plant">
+        </div>
+
+        <div class="reviews2">
+            <img src="https://cdn-icons-png.flaticon.com/512/147/147137.png" width="100px" alt="Snake Plant">
+            <h3>“Fast delivery and high-quality plants. My room looks so much greener and brighter now!”</h3>
+            <p>Fleyunn,Mandalay</p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/726/small/yellow-five-stars-quality-rating-icons-5-stars-icon-five-star-sign-rating-symbol-transparent-background-illustration-png.png" width="100px" alt="Snake Plant">
+        </div>
+
+        <div class="reviews3">
+            <img src="https://static.vecteezy.com/system/resources/previews/019/896/012/non_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" width="100px" alt="Snake Plant">
+            <h3>“Such a beautiful collection of indoor plants! The prices are reasonable and the customer service is very friendly.”</h3>
+            <p>Han Ni,Yangon</p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/726/small/yellow-five-stars-quality-rating-icons-5-stars-icon-five-star-sign-rating-symbol-transparent-background-illustration-png.png" width="100px" alt="Snake Plant">
+        </div>
+
+        <div class="reviews4">
+            <img src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png" width="100px" alt="Snake Plant">
+            <h3>“I bought some flower seeds and they started growing within a week. Very happy with my purchase!”</h3>
+            <p>Bo Bo,Yangon</p>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/726/small/yellow-five-stars-quality-rating-icons-5-stars-icon-five-star-sign-rating-symbol-transparent-background-illustration-png.png" width="100px" alt="Snake Plant">
+        </div>
+        </div>
+        </div>
+ <!--Reviews-->
+
+
+</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+ 
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/plants-shop-illustration-svg-download-png-4003154.png" id="footer-logo" width="50px" alt="">
+                <span id="footer-logo">HYC (Plants & Seeds Store)</span>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Page2.html">Shop</a></li>
+                <li><a href="care tips.html">Care Guides</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>   
+                <a href="#" class="fa fa-instagram"></a>
+                </ul>
+          </div>
+
+          
+
+        <hr>
+
+
+        <p class="footer-copyright" style="color: white;">
+            &copy; 2026 Year-7 Sangria Web Development (Room-5). All rights reserved.
+        </p>
+    </footer>
+    <!-- Footer -->
+     
+    <a href="#top">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25243.png" id="backtotop" width="50" alt="Back to top">
+</a>
+
+</body>
+</html>
